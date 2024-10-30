@@ -5,8 +5,8 @@ export const MyBanks = () => {
     <div className="lg:grid lg:grid-cols-custom2 gap-5">
       <Siderbar />
       {/* second grid */}
-      <div className="p-2 lg:flex lg:flex-col justify-center gap-10">
-        <div className="space-y-2">
+      <div className=" lg:flex lg:flex-col justify-center gap-10 mb-64">
+        <div className="">
           <p className="font-inter font-[600] text-[1.9rem] text-[#101828]">
             My Bank Accounts
           </p>
@@ -16,7 +16,7 @@ export const MyBanks = () => {
         </div>
 
         <div>
-          <p className="font-inter font-[600] text-[1.1rem] text-[#101828] flex items-center justify-between">
+          <p className="font-inter font-[600] text-[1.1rem] text-[#101828] flex items-center justify-between mb-5">
             Your Cards
             <img src="Dropdown.svg" alt="" />
           </p>

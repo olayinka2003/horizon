@@ -27,6 +27,7 @@ export const Login = () => {
         <input
         onChange={(e)=> setEmail(e.target.value)}
           type="email"
+          value={email}
           placeholder="Enter your email"
           required
           className="bg-[#ffffff] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] focus:outline-none"

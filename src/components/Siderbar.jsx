@@ -29,11 +29,11 @@ export const Siderbar = () => {
           </li>
           <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
             <img src="receipt.svg" alt="" />
-            Transaction History
-          </li>
+           <Link to="/mytransactions">Transaction History
+           </Link>           </li>
           <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
             <img src="money.svg" alt="" />
-            Payment Transfer
+          <Link to='/payment'>Payment Transfer</Link>  
           </li>
           <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
             {" "}
@@ -42,7 +42,7 @@ export const Siderbar = () => {
           </li>
         </ul>
 
-        <div className="border-t-2 flex items-center justify-between mt-10">
+        <div className="border-t-2 flex items-center justify-between mt-[21.5rem]">
           <img src="Avatar.svg" alt="" />
           <span className="space-y-2">
             <p>Adrian Hajdin</p>
