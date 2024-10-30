@@ -8,6 +8,7 @@ export default {
     extend: {
       gridTemplateColumns: {
         custom: "280px 650px 329px",
+        custom2: "280px 900px",
       },
     },
   },

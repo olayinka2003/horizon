@@ -1,59 +1,14 @@
 import { useState } from "react";
+import { Siderbar } from "./Siderbar";
+import { Rightbar } from "./Rightbar";
 
 export const Dashboard = () => {
   const [active, setIsactive] = useState("chase");
   return (
     <div className="lg:grid lg:grid-cols-custom overflow-x-hidden ">
-      <div className="flex flex-col justify-center gap-10 border-r-2 p-2  h-screen">
-        <div className="flex items-center gap-1">
-          <img src="logo.svg" alt="" />{" "}
-          <p className="font-inter text-[1.5rem] text-[#00214f] font-[500]">
-            Horizon
-          </p>
-        </div>
-        <div className="rounded-[8px] py-[8px] px-[10px] border-[1px] border-[#d0d5dd] w-full flex items-center space-x-1 cursor-pointer">
-          <img src="search.svg" alt="" />
-          <input
-            type="text"
-            placeholder="Search"
-            className="outline-none w-full text-sm"
-          />
-        </div>
+      <Siderbar />
 
-        <ul className="cursor-pointer">
-          <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px] bg-gradient-to-r from-[#0179FE] to-[#4893FF] text-white">
-            <img src="home.svg" alt="" /> Home
-          </li>
-          <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
-            <img src="dollar-circle.svg" alt="" />
-            My Banks
-          </li>
-          <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
-            <img src="receipt.svg" alt="" />
-            Transaction History
-          </li>
-          <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
-            <img src="money.svg" alt="" />
-            Payment Transfer
-          </li>
-          <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
-            {" "}
-            <img src="card.svg" alt="" />
-            Connect Bank
-          </li>
-        </ul>
-
-        <div className="border-t-2 flex items-center justify-between mt-10">
-          <img src="Avatar.svg" alt="" />
-          <span className="space-y-2">
-            <p>Adrian Hajdin</p>
-            adrian@jsmastery.pro
-          </span>
-          <img src="log-out.svg" alt="" />
-        </div>
-      </div>
-
-      <div className="p-5 ">
+      <div className="p-5  ">
         <div>
           <p className="font-inter font-[600] text-[1.9rem]">
             Welcome,{" "}
@@ -167,16 +122,16 @@ export const Dashboard = () => {
           </div>
         </div>
         <div>
-          <ul className="mt-4 cursor-pointer">
-            <li className="py-[12px] px-[24px] border-b-[1px] bg-[#f9fafb] flex items-center gap-5 justify-between font-inter text-[#475467] font-[500] text-[0.8rem]">
+          <div className="mt-4 cursor-pointer">
+            <div className="py-[12px] px-[24px] border-b-[1px] bg-[#f9fafb] flex items-center gap-5 justify-between font-inter text-[#475467] font-[500] text-[0.8rem]">
               <p className="flex-1">Transaction</p>
               <p className="flex-1">Amount</p>
               <p className="flex-1">Status</p>
               <p className="flex-1">Date</p>
               <p className="flex-1">Category</p>
-            </li>
+            </div>
             {/* first */}
-            <li className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between">
+            <div className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between">
               <div className="flex items-center gap-2 flex-1">
                 <img src="spotify.svg" alt="" />
                 <p className="font-inter font-[500] text-[0.89rem] text-[#101828]">
@@ -195,10 +150,10 @@ export const Dashboard = () => {
               <p className="flex items-center gap-1 border-[1.5px] border-[#1570ef] rounded-[16px] py-[2px] px-[8px] font-inter font-[500] text-[0.8rem] text-[#175cd3] flex-1">
                 <img src="bluedot.svg" alt="" /> Subscriptions
               </p>
-            </li>
+            </div>
 
             {/* second */}
-            <li className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between bg-[#f6fef9]">
+            <div className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between bg-[#f6fef9]">
               <div className="flex items-center gap-2 flex-1">
                 <img src="alexa.png" alt="" />
                 <p className="font-inter font-[500] text-[0.89rem] text-[#101828]">
@@ -217,10 +172,10 @@ export const Dashboard = () => {
               <p className="flex items-center gap-1 border-[1.5px] border-[#039855] rounded-[16px] py-[2px] px-[8px] font-inter font-[500] text-[0.8rem] text-[#027a48] flex-1">
                 <img src="greendot.svg" alt="" /> Deposit
               </p>
-            </li>
+            </div>
 
             {/* third */}
-            <li className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between">
+            <div className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between">
               <div className="flex items-center gap-4 flex-1">
                 <img src="figma.svg" alt="" />
                 <p className="font-inter font-[500] text-[0.89rem] text-[#101828]">
@@ -239,10 +194,10 @@ export const Dashboard = () => {
               <p className="flex items-center gap-1 border-[1.5px] border-[#039855] rounded-[16px] py-[2px] px-[8px] font-inter font-[500] text-[0.8rem] text-[#027a48] flex-1">
                 <img src="greendot.svg" alt="" /> income
               </p>
-            </li>
+            </div>
 
             {/* fourth */}
-            <li className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between  bg-[#f6fef9]">
+            <div className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between  bg-[#f6fef9]">
               <div className="flex items-center gap-4 flex-1">
                 <img src="fresh.svg" alt="" />
                 <p className="font-inter font-[500] text-[0.89rem] text-[#101828]">
@@ -261,14 +216,14 @@ export const Dashboard = () => {
               <p className="flex items-center gap-1 border-[1.5px] border-[#444ce7] rounded-[16px] py-[2px] px-[8px] font-inter font-[500] text-[0.8rem] text-[#3538cd] flex-1">
                 <img src="purpledot.svg" alt="" /> Groceries
               </p>
-            </li>
+            </div>
 
             {/* fifth */}
-            <li className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between">
+            <div className="py-[12px] px-[24px] border-b-[1px] flex items-center gap-5 justify-between">
               <div className="flex items-center gap-4 flex-1">
                 <img src="sam.svg" alt="" />
                 <p className="font-inter font-[500] text-[0.89rem] text-[#101828]">
-                  Spotify
+                  Sam Sulek
                 </p>
               </div>
               <p className="font-inter font-[600] text-[0.89rem] text-[#f04438] flex-1">
@@ -283,76 +238,12 @@ export const Dashboard = () => {
               <p className="flex items-center gap-1 border-[1.5px] border-[#dd2590] rounded-[16px] py-[2px] px-[8px] font-inter font-[500] text-[0.8rem] text-[#c11574] flex-1">
                 <img src="pink.svg" alt="" /> Food
               </p>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
       {/* third grid */}
-      <div className="border-l-[2px] p-2 ">
-        <div className="w-full relative flex flex-col gap-14">
-          <img src="color.svg" alt="" className="w-full" />
-          <img src="master.svg" alt="" className="absolute top-10" />
-          <div className="space-y-2">
-            <p className="font-inter font-[600] text-[1.5rem] text-[#101828]">
-              Adrian Hajdin
-            </p>
-            <p className="font-inter font-[400] text-[1rem] text-[#475467]">
-              adrian@jsmastery.pro
-            </p>
-          </div>
-        </div>
-        <div className="mt-5 border-b-[1px]">
-          <div className="flex items-center justify-between p-4">
-            <p className="text-[#101828] font-inter font-[600] text-[1.15rem]">
-              My Banks
-            </p>
-            <span className="font-inter font-[600] text-[0.89rem] text-[#475476] flex items-center gap-1">
-              <img src="omo.svg" alt="" /> Add bank
-            </span>
-          </div>
-          <img src="Cards.svg" alt="" />
-        </div>
-        <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <p className="text-[#101828] font-inter font-[600] text-[1.15rem]">
-              My budgets
-            </p>
-            <img src="Dropdown.svg" alt="" />
-          </div>
-          <div className="flex items-center gap-5 rounded-[12px] p-[16px] bg-[#f5faff]">
-            <img src="sub.svg" alt="" />
-            <div className="w-full flex flex-col justify-center gap-4">
-              <div className="flex items-center justify-between">
-                <p className="font-inter font-[500] text-[#194185] text-[0.89rem]">Subscription</p>
-                <p className="font-inter font-[400] text-[0.89rem] text-[#175cd3]">$25 left</p>
-              </div>
-              <img src="blueprog.svg" alt="" />
-            </div>
-          </div>
-          {/* second */}
-          <div className="flex items-center gap-5 rounded-[12px] p-[16px] bg-[#fef6fb]">
-            <img src="bag.svg" alt="" />
-            <div className="w-full flex flex-col justify-center gap-4">
-              <div className="flex items-center justify-between">
-                <p className="font-inter font-[500] text-[#851651] text-[0.89rem]">Food and booze</p>
-                <p className="font-inter font-[400] text-[0.89rem] text-[#c11574]">$120 left</p>
-              </div>
-              <img src="pinkprog.svg" alt="" />
-            </div>
-          </div>
-          {/* third */}
-          <div className="flex items-center gap-5 rounded-[12px] p-[16px] bg-[#f6fef9]">
-            <img src="savings.svg" alt="" />
-            <div className="w-full flex flex-col justify-center gap-4">
-              <div className="flex items-center justify-between">
-                <p className="font-inter font-[500] text-[#054f31] text-[0.89rem]">Savings</p>
-                <p className="font-inter font-[400] text-[0.89rem] text-[#027a48]">$50 left</p>
-              </div>
-              <img src="greenprog.svg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Rightbar/>
     </div>
   );
 };

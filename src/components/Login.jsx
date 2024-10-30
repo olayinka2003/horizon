@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
+  const [email, setEmail] = useState('setEmail');
   return (
     <div className="bg-[#FFFFFF] lg:w-[50%] lg:m-auto p-2 ">
       <div className="flex items-center gap-1">
@@ -23,6 +25,7 @@ export const Login = () => {
           Email
         </label>
         <input
+        onChange={(e)=> setEmail(e.target.value)}
           type="email"
           placeholder="Enter your email"
           required
