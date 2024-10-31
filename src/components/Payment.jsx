@@ -2,8 +2,8 @@ import { Siderbar } from "./Siderbar";
 
 export const Payment = () => {
   return (
-    <div className="lg:grid lg:grid-cols-custom2 font-inter">
-      <Siderbar />
+    <div className="lg:grid lg:grid-cols-custom3 font-inter">
+      <Siderbar/>
       <div className="p-2 flex flex-col gap-5">
         <div className="font-inter flex flex-col gap-10 border-b-[1px] p-2">
           <div className="flex flex-col gap-3">
@@ -56,7 +56,7 @@ export const Payment = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between border-b-[1px] py-3">
           <div>
             <p className="font-medium text-sm text-[#344054]">
               Transfer Note(Optional)
@@ -74,6 +74,25 @@ export const Payment = () => {
             </p>
           </div>
         </div>
+        <div className="font-inter border-b-[1px] py-3 flex flex-col gap-3">
+            <p className="font-semibold text-lg text-[#101828]">Bank account details</p>
+            <p className="font-normal text-sm text-[#475467]">Enter the bank account details of the recipient</p>
+        </div>
+
+        <div className="font-inter border-b-[1px] py-3 flex justify-between items-center">
+         <p className="font-medium text-sm text-[#344054]">Recipient&apos;s Email Address </p>
+         <input type="email" placeholder="John@gmail.com " className="border-[1px] border-[#d0d5dd] py-[10px] px-[14px] rounded-[8px] focus:outline-none w-[50%]" />
+        </div>
+        <div className="font-inter border-b-[1px] py-3 flex justify-between items-center">
+         <p className="font-medium text-sm text-[#344054]">Recipient&apos;s Bank Account Number </p>
+         <input type="email" placeholder="Enter the account number" className="border-[1px] border-[#d0d5dd] py-[10px] px-[14px] rounded-[8px] focus:outline-none w-[50%]" />
+        </div> 
+        <div className="font-inter border-b-[1px] py-3 flex justify-between items-center">
+         <p className="font-medium text-sm text-[#344054]">Amount </p>
+         <input type="email" placeholder="40000" className="border-[1px] border-[#d0d5dd] py-[10px] px-[14px] rounded-[8px] focus:outline-none w-[50%]" />
+        </div>
+
+        <button className="rounded-lg py-[14px] px-4 shadow-lg text-white  bg-gradient-to-r from-[#0179FE] to-[#4893FF]  text-sm font-semibold ">Transfer Funds</button>
       </div>
     </div>
   );
