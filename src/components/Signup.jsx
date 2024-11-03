@@ -1,24 +1,10 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
-export const Signup = () => {
-  const [name, setName] = useState("");
 
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    const verify = name.length >= 4;
-
-    if (verify) {
-      navigate("/dashboard");
-      console.log("Signup successful");
-    } else {
-      alert("Name must be at least 4 characters long");
-    }
-  };
-
-  // ... rest of the component
+// eslint-disable-next-line react/prop-types
+export const Signup = ({name,onChange,onClick}) => {
+ 
 
   return (
     <div className="bg-[#FFFFFF] lg:w-[50%] lg:m-auto p-2 ">
@@ -45,10 +31,12 @@ export const Signup = () => {
               First Name
             </label>
             <input
-              onChange={(e) => setName(e.target.value)}
+            value={name}
+            onChange={(e)=>onChange(e.target.value)}
+             
               type="name"
               required
-              value={name}
+             
               className="border-[1px] border-[#d0d5dd] py-[10px] px-[14px] rounded-[8px] focus:outline-none"
             />
           </span>
@@ -132,7 +120,7 @@ export const Signup = () => {
           required
         />
         <button
-          onClick={handleClick}
+        onClick={onClick}
           className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] text-white font-inter font-[600] text-[1rem]"
         >
           Sign Up
@@ -140,7 +128,7 @@ export const Signup = () => {
         <p className="flex items-center gap-3 text-center justify-center">
           Already have an account?
           <span className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] bg-clip-text text-transparent font-inter font-[600] text-[0.9rem]">
-            <Link to="/">Login</Link>
+            <Link to="/login">Login</Link>
           </span>
         </p>
       </form>

@@ -3,18 +3,19 @@ import { Siderbar } from "./Siderbar";
 import { Rightbar } from "./Rightbar";
 import { Transcript } from "./Transcript";
 
-export const Dashboard = () => {
+// eslint-disable-next-line react/prop-types
+export const Dashboard = ({name, Active}) => {
   const [active, setIsactive] = useState("chase");
   return (
     <div className="lg:grid lg:grid-cols-custom overflow-x-hidden ">
-      <Siderbar />
+      <Siderbar Active={Active} />
 
       <div className="p-5  ">
         <div>
           <p className="font-inter font-[600] text-[1.9rem]">
             Welcome,{" "}
             <span className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] bg-clip-text text-transparent">
-              Adrian
+              {name}
             </span>
           </p>
           <p className="font-inter text-[#475467] font-[400] text-[16px]">
@@ -22,11 +23,11 @@ export const Dashboard = () => {
           </p>
         </div>
 
-        <div className="p-[24px] rounded-[12px] border-[1px] border-[#eaecf0] w-full mt-10 shadow-sm">
-          <div className="flex items-center gap-4">
+        <div className="p-[24px] rounded-[12px] border-[1px] border-[#eaecf0] w-full mt-10 shadow-sm flex justify-between">
+          <div className="flex items-center gap-4 w-full">
             <img src="pie.svg" alt="" />
             <div className="flex flex-col gap-4 w-[80%]">
-              <span className="flex justify-between">
+              <span className="lg:flex lg:justify-between md:flex md:justify-between">
                 <p className="font-inter text-[#101828] font-[600] text-[1rem]">
                   2 Bank Accounts
                 </p>
@@ -42,7 +43,7 @@ export const Dashboard = () => {
                 <p className="font-inter font-[500] text-[#475467] text-[0.9rem]">
                   Total Current Balance
                 </p>
-                <p className="font-inter font-[600] text-[#101828] text-[1.9rem]">
+                <p className="font-inter lg:font-[600] text-[#101828] lg:text-[1.9rem] text-base font-medium md:font-semibold md:text-[1.9rem]">
                   $2,698.12
                 </p>
               </span>
@@ -51,30 +52,30 @@ export const Dashboard = () => {
         </div>
 
         <div className="mt-10">
-          <span className="flex items-center justify-between">
+          <span className="lg:flex-row lg:items-center lg:justify-between flex flex-col md:flex-row md:items-center md:justify-between">
             <p className="font-inter font-[600] text-[#101828] text-[1.5rem] bg-special-gradient">
               Recent transactions
             </p>
-            <button className="py-[10px] px-[16px] rounded-[8px] border-[1px] border-[#d0d5dd] font-inter font-[600] text-[#344054] text-[0.9rem]">
+            <button className="py-[10px] px-[16px] rounded-[8px] border-[1px] border-[#d0d5dd] font-inter font-[600] text-[#344054] text-[0.9rem] lg:flex lg:items-start">
               View all
             </button>
           </span>
         </div>
 
-        <div className="flex items-center gap-10 cursor-pointer">
+        <div className="flex items-center gap-10 cursor-pointer flex-wrap mt-3">
           <p
             onClick={() => setIsactive("chase")}
-            className={`"font-inter font-[600] text-[1rem] text-[#667065] ${
+            className={`"font-inter lg:font-[600] font-medium text-sm lg:text-[1rem] text-[#667065] ${
               active === "chase"
                 ? "border-b-[3px] border-[#0179fe] bg-gradient-to-r from-[#0179FE] to-[#4893FF] bg-clip-text text-transparent p-2"
                 : ""
-            } `}
+            } text-nowrap `}
           >
             Chase Bank
           </p>
           <p
             onClick={() => setIsactive("america")}
-            className={`font-inter font-[600] text-[1rem] text-[#667065] ${
+            className={`font-inter lg:font-[600] text-nowrap lg:text-[1rem] font-medium text-sm text-[#667065] ${
               active === "america"
                 ? "border-b-[3px] border-[#0179fe] bg-gradient-to-r from-[#0179FE] to-[#4893FF] bg-clip-text text-transparent p-2"
                 : ""
@@ -84,7 +85,7 @@ export const Dashboard = () => {
           </p>
           <p
             onClick={() => setIsactive("first")}
-            className={`font-inter font-[600] text-[1rem] text-[#667065] ${
+            className={`font-inter lg:font-[600] font-medium text-sm text-nowrap lg:text-[1rem] text-[#667065] ${
               active === "first"
                 ? "border-b-[3px] border-[#0179fe] bg-gradient-to-r from-[#0179FE] to-[#4893FF] bg-clip-text text-transparent p-2 "
                 : ""

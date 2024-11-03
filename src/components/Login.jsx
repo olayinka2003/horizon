@@ -1,8 +1,9 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
-export const Login = () => {
-  const [email, setEmail] = useState('');
+// eslint-disable-next-line react/prop-types
+export const Login = ({password,onClick,onChange}) => {
+
   return (
     <div className="bg-[#FFFFFF] lg:w-[50%] lg:m-auto p-2 ">
       <div className="flex items-center gap-1">
@@ -25,9 +26,8 @@ export const Login = () => {
           Email
         </label>
         <input
-        onChange={(e)=> setEmail(e.target.value)}
+       
           type="email"
-          value={email}
           placeholder="Enter your email"
           required
           className="bg-[#ffffff] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] focus:outline-none"
@@ -37,13 +37,15 @@ export const Login = () => {
         </label>
         <input
           type="password"
+          onChange={(e)=>onChange(e.target.value)}
+          value={password}
           placeholder="Enter your password"
           required
           className="bg-[#ffffff] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] focus:outline-none"
         />
 
-        <button className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] text-white font-inter font-[600] text-[1rem]">
-        <Link to='/dashboard'>Login</Link>  
+        <button onClick={onClick} className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] text-white font-inter font-[600] text-[1rem]">
+        Login  
         </button>
 
         <p className="flex items-center gap-3 text-center justify-center">

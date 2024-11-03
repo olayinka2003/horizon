@@ -1,11 +1,11 @@
 import { Siderbar } from "./Siderbar";
 
-export const MyBanks = () => {
+export const MyBanks = ({Active}) => {
   return (
     <div className="lg:grid lg:grid-cols-custom2 gap-5">
-      <Siderbar />
+      <Siderbar Active={Active} />
       {/* second grid */}
-      <div className=" lg:flex lg:flex-col justify-center gap-10 mb-64">
+      <div className=" lg:flex lg:flex-col lg:justify-center gap-10 mb-64 p-4 flex flex-col">
         <div className="">
           <p className="font-inter font-[600] text-[1.9rem] text-[#101828]">
             My Bank Accounts
@@ -20,7 +20,7 @@ export const MyBanks = () => {
             Your Cards
             <img src="Dropdown.svg" alt="" />
           </p>
-          <div className="lg:grid lg:grid-cols-3 gap-10">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-10 md:grid md:grid-cols-3">
             <div>
                 <img src="ATM.svg" alt="" />
                 <div className="flex  flex-col gap-2 justify-center">
@@ -45,7 +45,7 @@ export const MyBanks = () => {
 
           </div>
           {/* newpurple */}
-          <div className="lg:grid lg:grid-cols-3 gap-10 mt-10">
+          <div className="lg:grid lg:grid-cols-3 gap-10 mt-10 md:grid md:grid-cols-3">
             <div>
                 <img src="atms.svg" alt="" />
                 <div className="flex  flex-col gap-2 justify-center">

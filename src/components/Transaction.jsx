@@ -1,14 +1,14 @@
 import { Siderbar } from "./Siderbar";
 import { Transcript } from "./Transcript";
 
-export const Transaction = () => {
+export const Transaction = ({Active}) => {
   return (
     <div className="lg:grid lg:grid-cols-custom2">
-      <Siderbar />
+      <Siderbar Active={Active}  />
       <div className="flex flex-col gap-10 p-2 ">
         <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <p className="font-inter font-[600] text-[1.9rem] text-[#101828]">
+          <div className="lg:flex-row lg:items-center lg:justify-between flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+            <p className="font-inter font-[600]  text-[1.9rem] text-[#101828]">
               Transaction history
             </p>{" "}
             <div className="rounded-[8px] py-[10px] px-[16px] border-[1px] border-[#d0d5dd] flex items-cente cursor-pointer">
