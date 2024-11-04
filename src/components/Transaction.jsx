@@ -1,6 +1,7 @@
 import { Siderbar } from "./Siderbar";
 import { Transcript } from "./Transcript";
 
+// eslint-disable-next-line react/prop-types
 export const Transaction = ({Active}) => {
   return (
     <div className="lg:grid lg:grid-cols-custom2">
@@ -61,7 +62,7 @@ export const Transaction = ({Active}) => {
           </div>
         </div>
         <Transcript />
-        <div className="font-inter flex items-center justify-between">
+        <div className="font-inter lg:flex items-center justify-between hidden ">
           <div className="flex items-center gap-2 font-semibold text-sm text-[#475467]">
             <img src="back.svg" alt="" /> Previous
           </div>
