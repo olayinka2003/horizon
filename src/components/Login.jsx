@@ -22,6 +22,7 @@ export const Login = ({password,onClick,onChange}) => {
         </p>
       </div>
       <form className="lg:flex lg:flex-col space-y-3 mt-7">
+        <span className="flex flex-col">
         <label htmlFor="Email" className="font-inter">
           Email
         </label>
@@ -32,6 +33,9 @@ export const Login = ({password,onClick,onChange}) => {
           required
           className="bg-[#ffffff] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] focus:outline-none"
         />
+        </span>
+
+        <span className="flex flex-col">
         <label htmlFor="password" className="font-inter">
           Password
         </label>
@@ -43,8 +47,9 @@ export const Login = ({password,onClick,onChange}) => {
           required
           className="bg-[#ffffff] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] focus:outline-none"
         />
+        </span>
 
-        <button onClick={onClick} className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] text-white font-inter font-[600] text-[1rem]">
+        <button onClick={onClick} className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] py-[10px] px-[14px] border-[1px] border-[#d0d5dd] rounded-[8px] text-white font-inter font-[600] text-[1rem] w-full">
         Login  
         </button>
 

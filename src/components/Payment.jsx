@@ -1,5 +1,6 @@
 import { Siderbar } from "./Siderbar";
 
+// eslint-disable-next-line react/prop-types
 export const Payment = ({Active}) => {
   return (
     <div className="lg:grid lg:grid-cols-custom3 font-inter">

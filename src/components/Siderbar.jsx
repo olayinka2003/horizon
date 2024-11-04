@@ -1,6 +1,7 @@
 import { AiFillHome } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 export const Siderbar = ({Active}) => {
   const location = useLocation();
 
