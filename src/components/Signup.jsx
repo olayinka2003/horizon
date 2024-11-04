@@ -89,7 +89,7 @@ export const Signup = ({name,onChange,onClick}) => {
           </span>
         </div>
         <div className="lg:flex lg:items-center lg:justify-between space-y-2">
-          <span className="flex flex-col lg:w-[45%]">
+          <span className="flex flex-col lg:w-[45%] w-full">
             <label htmlFor="Date Of Birth" className="font-inter">
               Date Of birth
             </label>
@@ -97,7 +97,7 @@ export const Signup = ({name,onChange,onClick}) => {
               type="date"
               placeholder="ex: yyyy-mm-dd"
               required
-              className="border-[1px] border-[#d0d5dd] py-[10px] px-[14px] rounded-[8px] focus:outline-none"
+              className="border-[1px] border-[#d0d5dd] py-[10px] px-[14px] rounded-[8px] focus:outline-none w-full"
             />
           </span>
           <span className="flex flex-col lg:w-[45%]">
