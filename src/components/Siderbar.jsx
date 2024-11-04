@@ -9,7 +9,7 @@ export const Siderbar = ({Active}) => {
 
   return (
   
-      <div className={`lg:flex lg:flex-col lg:justify-center lg:gap-10 lg:border-r-2 lg:p-2 lg:mb-20 ${!Active?"hidden":"block"} `}>
+      <div className={`lg:flex lg:flex-col lg:justify-center lg:gap-10 lg:border-r-2 lg:p-2 lg:mb-20 ${!Active?"hidden":"block"} flex flex-col justify-center gap-5 `}>
         <div className="flex items-center gap-1">
           <img src="logo.svg" alt="Horizon logo" />
           <p className="font-inter text-[1.5rem] text-[#00214f] font-[500]">

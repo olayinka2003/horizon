@@ -1,4 +1,4 @@
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import "./App.css";
 import { Login } from "./components/Login";
 import { Routes, Route } from "react-router-dom";
@@ -44,9 +44,7 @@ function App() {
 
   return (
     <div className="relative">
-      <p onClick={openSideBar} className="absolute right-4 top-0 text-black cursor-pointer lg:hidden block">
-        <GiHamburgerMenu  />
-      </p>
+     
       <Routes>
         <Route
           path="/"
@@ -64,7 +62,7 @@ function App() {
             />
           }
         />
-        <Route path="/dashboard" element={<Dashboard Active={isActive} name={name} />} />
+        <Route path="/dashboard" element={<Dashboard openSideBar={openSideBar} Active={isActive} name={name} />} />
         <Route path="/mybank" element={<MyBanks Active={isActive}/>} />
         <Route path="/mytransactions" element={<Transaction Active={isActive} />} />
         <Route path="/payment" element={<Payment Active={isActive} />} />
