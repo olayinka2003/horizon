@@ -1,9 +1,14 @@
+/* eslint-disable react/prop-types */
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Siderbar } from "./Siderbar";
 
-export const MyBanks = ({Active}) => {
+export const MyBanks = ({Active,openSideBar,closeSideBar}) => {
   return (
     <div className="lg:grid lg:grid-cols-custom2 gap-5">
-      <Siderbar Active={Active} />
+      <Siderbar Active={Active} closeSideBar={closeSideBar} />
+      <p onClick={openSideBar} className="absolute right-4 top-0 text-black cursor-pointer lg:hidden block">
+        <GiHamburgerMenu  />
+      </p>
       {/* second grid */}
       <div className=" lg:flex lg:flex-col lg:justify-center gap-10 mb-64 p-4 flex flex-col">
         <div className="">

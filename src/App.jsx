@@ -16,8 +16,12 @@ function App() {
   const [isActive, setIsActive] = useState(false);
 
   const openSideBar = () => {
-    setIsActive((f)=>!f);
+    setIsActive(true);
   };
+
+  const closeSideBar = () => {
+    setIsActive(false);
+  }
 
   const navigate = useNavigate();
 
@@ -62,10 +66,10 @@ function App() {
             />
           }
         />
-        <Route path="/dashboard" element={<Dashboard openSideBar={openSideBar} Active={isActive} name={name} />} />
-        <Route path="/mybank" element={<MyBanks Active={isActive}/>} />
-        <Route path="/mytransactions" element={<Transaction Active={isActive} />} />
-        <Route path="/payment" element={<Payment Active={isActive} />} />
+        <Route path="/dashboard" element={<Dashboard openSideBar={openSideBar} Active={isActive} name={name} closeSideBar={closeSideBar} />} />
+        <Route path="/mybank" element={<MyBanks Active={isActive} openSideBar={openSideBar} closeSideBar={closeSideBar}/>} />
+        <Route path="/mytransactions" element={<Transaction Active={isActive}  openSideBar={openSideBar} closeSideBar={closeSideBar}/>} />
+        <Route path="/payment" element={<Payment Active={isActive}  openSideBar={openSideBar} closeSideBar={closeSideBar}/>} />
       </Routes>
     </div>
   );

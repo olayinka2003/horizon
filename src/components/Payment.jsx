@@ -1,10 +1,14 @@
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Siderbar } from "./Siderbar";
 
 // eslint-disable-next-line react/prop-types
-export const Payment = ({Active}) => {
+export const Payment = ({Active, openSideBar, closeSideBar}) => {
   return (
-    <div className="lg:grid lg:grid-cols-custom3 font-inter">
-      <Siderbar Active={Active}/>
+    <div className="lg:grid lg:grid-cols-custom3 font-inter relative">
+      <p onClick={openSideBar} className="absolute right-4 top-0 text-black cursor-pointer lg:hidden block">
+        <GiHamburgerMenu  />
+      </p>
+      <Siderbar Active={Active} closeSideBar={closeSideBar}/>
       <div className="p-2 flex flex-col gap-5">
         <div className="font-inter flex flex-col gap-10 border-b-[1px] p-2">
           <div className="flex flex-col gap-3">

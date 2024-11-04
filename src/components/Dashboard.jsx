@@ -5,11 +5,11 @@ import { Transcript } from "./Transcript";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 // eslint-disable-next-line react/prop-types
-export const Dashboard = ({name, Active,openSideBar}) => {
+export const Dashboard = ({name, Active,openSideBar,closeSideBar}) => {
   const [active, setIsactive] = useState("chase");
   return (
     <div className="lg:grid lg:grid-cols-custom overflow-x-hidden relative">
-      <Siderbar Active={Active} />
+      <Siderbar Active={Active} closeSideBar={closeSideBar} />
       <p onClick={openSideBar} className="absolute right-4 top-0 text-black cursor-pointer lg:hidden block">
         <GiHamburgerMenu  />
       </p>

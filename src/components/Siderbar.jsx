@@ -2,7 +2,7 @@ import { AiFillHome } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-export const Siderbar = ({Active}) => {
+export const Siderbar = ({Active, closeSideBar}) => {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
@@ -39,7 +39,7 @@ export const Siderbar = ({Active}) => {
             ) : (
               <AiFillHome />
             )}
-            <Link to="/dashboard">Home</Link>
+            <Link onClick={closeSideBar} to="/dashboard">Home</Link>
           </li>
 
           <li
@@ -50,7 +50,7 @@ export const Siderbar = ({Active}) => {
             }`}
           >
             <img src="dollar-circle.svg" alt="Bank icon" />
-            <Link to="/mybank">My Banks</Link>
+            <Link  onClick={closeSideBar} to="/mybank">My Banks</Link>
           </li>
 
           <li
@@ -61,7 +61,7 @@ export const Siderbar = ({Active}) => {
             }`}
           >
             <img src="receipt.svg" alt="Transaction History icon" />
-            <Link to="/mytransactions">Transaction History</Link>
+            <Link  onClick={closeSideBar} to="/mytransactions">Transaction History</Link>
           </li>
 
           <li
@@ -72,7 +72,7 @@ export const Siderbar = ({Active}) => {
             }`}
           >
             <img src="money.svg" alt="Payment Transfer icon" />
-            <Link to="/payment">Payment Transfer</Link>
+            <Link  onClick={closeSideBar} to="/payment">Payment Transfer</Link>
           </li>
 
           <li className="flex items-center gap-1 py-[16px] px-[12px] rounded-[6px]">
