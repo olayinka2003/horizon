@@ -1,13 +1,21 @@
 
+import { useEffect, } from "react";
 import { Link } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
 export const Signup = ({name,onChange,onClick}) => {
- 
 
+  useEffect(() => {
+    const storedName = JSON.parse(localStorage.getItem('name'));
+    if (storedName !== name) {
+      localStorage.setItem('name', JSON.stringify(name));
+    }
+  }, [name]);
+  
   return (
-    <div className="bg-[#FFFFFF] lg:w-[50%] lg:m-auto p-2 ">
+  <div className="lg:flex lg:items-center w-full lg:justify-between">
+    <div className="bg-[#FFFFFF]   lg:w-[40%] lg:mx-auto lg:p-0 p-2  ">
       <div className="flex items-center gap-1">
         <img src="logo.svg" alt="" />{" "}
         <p className="font-inter text-[1.89rem] text-[#00214f] font-[700]">
@@ -132,10 +140,12 @@ export const Signup = ({name,onChange,onClick}) => {
         <p className="flex items-center gap-3 text-center justify-center">
           Already have an account?
           <span className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] bg-clip-text text-transparent font-inter font-[600] text-[0.9rem]">
-            <Link to="/login">Login</Link>
+            <Link to="/">Login</Link>
           </span>
         </p>
       </form>
+    </div>
+    <img src="Section.svg" alt="" className="w-[50%]  lg:block hidden" />
     </div>
   );
 };

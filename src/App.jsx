@@ -29,7 +29,7 @@ function App() {
     const verify = name.length >= 4;
 
     if (verify) {
-      navigate("/dashboard");
+      navigate("/");
       console.log("Signup successful");
     } else {
       alert("Name must be at least 4 characters long");
@@ -50,20 +50,21 @@ function App() {
     <div className="relative">
      
       <Routes>
+        
         <Route
           path="/"
-          element={
-            <Signup name={name} onClick={handleClick} onChange={setName} />
-          }
-        />
-        <Route
-          path="/login"
           element={
             <Login
               password={password}
               onChange={setPassword}
               onClick={Logins}
             />
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <Signup name={name} onClick={handleClick} onChange={setName} />
           }
         />
         <Route path="/dashboard" element={<Dashboard openSideBar={openSideBar} Active={isActive} name={name} closeSideBar={closeSideBar} />} />

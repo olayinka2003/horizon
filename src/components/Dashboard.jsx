@@ -5,8 +5,11 @@ import { Transcript } from "./Transcript";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 // eslint-disable-next-line react/prop-types
-export const Dashboard = ({name, Active,openSideBar,closeSideBar}) => {
+export const Dashboard = ({ Active,openSideBar,closeSideBar}) => {
   const [active, setIsactive] = useState("chase");
+  const [value, ] = useState(() => {
+    return JSON.parse(localStorage.getItem('name')) || '';
+  });
   return (
     <div className="lg:grid lg:grid-cols-custom overflow-x-hidden relative">
       <Siderbar Active={Active} closeSideBar={closeSideBar} />
@@ -19,7 +22,7 @@ export const Dashboard = ({name, Active,openSideBar,closeSideBar}) => {
           <p className="font-inter font-[600] text-[1.9rem]">
             Welcome,{" "}
             <span className="bg-gradient-to-r from-[#0179FE] to-[#4893FF] bg-clip-text text-transparent">
-              {name}
+              {value}
             </span>
           </p>
           <p className="font-inter text-[#475467] font-[400] text-[16px]">

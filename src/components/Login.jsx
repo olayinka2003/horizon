@@ -1,11 +1,15 @@
 
+
 import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 export const Login = ({password,onClick,onChange}) => {
 
+
+
   return (
-    <div className="bg-[#FFFFFF] lg:w-[50%] lg:m-auto p-2 ">
+    <div className="lg:flex lg:items-center w-full">
+    <div className="bg-[#FFFFFF] lg:w-[40%] lg:mx-auto lg:p-0 p-2 ">
       <div className="flex items-center gap-1">
         <img src="logo.svg" alt="" />{" "}
         <p className="font-inter text-[1.89rem] text-[#00214f] font-[700]">
@@ -60,6 +64,8 @@ export const Login = ({password,onClick,onChange}) => {
           </span>
         </p>
       </form>
+    </div>
+    <img src="Section.svg" alt="" className="w-[50%] mx-auto lg:block hidden" />
     </div>
   );
 };
